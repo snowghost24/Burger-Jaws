@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Burgers</title>
+   <link href="./assets/css/bootstrap.css" rel="stylesheet">
+   <!-- Custom styles for this template -->
+   <link href="./assets/css/jumbotron.css" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
+</head>
+
+<body>
+   <div class="container">
+      <div class="header clearfix">
+         <nav>
+            <ul class="nav nav-pills float-right">
+               <li class="nav-item">
+                  {{!-- <a class="nav-link active" href="index.html">Home
+                     <span class="sr-only">(current)</span>
+                  </a> --}}
+               </li>
+            </ul>
+         </nav>
+      </div>
+
+      <div class="jumbotron">
+         <img id="burgerimg" src="/assets/img/big_mac.png">
+         <h1 class="display-3">Good Burger</h1>
+      </div>
+      
+      {{{ body }}}
+      <form action="/newburger" method="POST" id="bcreate">
+         <div class="form-group">
+            <label for="burger-input">Burger Name</label>
+            <input type="text" class="form-control" id="burger-input" placeholder="enter here" name="createdBurger">
+            <small id="burgerlHelp" class="form-text text-muted">Welcome go Good Burger home of the Good Burger can i take your order?</small>
+         </div>
+         <div class="form-actions">
+         <button type="submit" id="submitter"class="btn btn-danger float-center">Submit Order</button>
+         </div>
+      </form>
+   </div>
+
+   <script>
+  
+   </script>
+</body>
+
+</html>

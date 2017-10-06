@@ -1,0 +1,26 @@
+{
+  "name": "burger-jaws",
+  "version": "1.0.0",
+  "description": "burgers ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowghost24/Burger-Jaws.git"
+  },
+  "author": "jose",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snowghost24/Burger-Jaws/issues"
+  },
+  "homepage": "https://github.com/snowghost24/Burger-Jaws#readme",
+  "dependencies": {
+    "express": "^4.16.1",
+    "express-handlebars": "*",
+    "body-parser": "*",
+    "mysql": "^2.10.2"
+  }
+}

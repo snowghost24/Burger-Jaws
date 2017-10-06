@@ -1,0 +1,53 @@
+<script>
+
+</script>
+
+
+<h1>Available Burgers</h1>
+<ul>
+  {{#each choices.new}}
+  <li>
+    <div id="{{this.id}}"><span>{{this.id}}
+      </span><span>{{this.burgerName}}</span>
+       <button id="button{{this.id}}" class="deleteBurger btn">Eat Burger!</button>
+    </div>
+  </li>
+  {{/each}}
+</ul>
+
+<h1>Eaten Burgers</h1>
+<ul>
+  {{#each choices.done}}
+  <li>
+    <div id="{{this.id}}"><span>{{this.id}}
+      </span><span>{{this.burgerName}}</span>
+      
+    </div>
+  </li>
+  {{/each}}
+</ul>
+
+
+
+
+<script>
+  $(".deleteBurger").on("click", function(event) {
+  event.preventDefault();
+    var burgerId = $(this).parent().attr('id')
+    var burgerName1= $(this).prev().html();
+    var dropLi = $(this).parent().parent()
+
+      var newPush = {
+      burgerName:burgerName1,
+      id: burgerId
+   }
+      $.ajax("/eatburger/" + burgerId, {
+      type: "post",
+      data: newPush
+    }).then(
+      function() {
+        location.reload();
+      }
+    );
+  });
+</script>
