@@ -9,7 +9,7 @@ if (process.env.JAWSDB_URL){
       host: 'localhost',
       user: 'root',
       password: "",
-      database: "day_planner_db "
+      database: "burgers"
     });
 }
 connection.connect();
